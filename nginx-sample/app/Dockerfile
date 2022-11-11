@@ -1,7 +1,4 @@
-FROM nginx:alpine
+FROM nginx:latest
 
-WORKDIR /app
-
-COPY . .
-
-COPY ./nginx.conf /etc/nginx/nginx.conf 
+COPY index.html /usr/share/nginx/html
+COPY default.conf /etc/nginx/conf.d/default.conf
